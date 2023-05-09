@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D0DB97;
+    margin: 0;
+    padding: 0;
+}
+header {
+background-color: #228B22;
+padding: 20px;
+text-align: center;
+color: white;
+font-size: 24px;
+}
+
+nav {
+    background-color: #fafafa;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #777;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #228B22;
+}
+.search-container {
+    text-align: center;
+    padding: 10px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-input {
+    font-size: 14px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    width: 200px;
+}
+
+.search-input:focus {
+    border-color: #228B22;
+}
+
+.site-description {
+    background-color: #fafafa;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    border-bottom: 1px solid #ccc;
+}
+
+main {
+width: 80%;
+margin: 0 auto;
+padding: 20px;
+}
+
+.plant {
+background-color: white;
+border: 1px solid #ccc;
+border-radius: 5px;
+padding: 20px;
+margin-bottom: 20px;
+}
+
+.plant-title {
+font-size: 22px;
+color: #228B22;
+margin-bottom: 10px;
+}
+
+.plant-description {
+font-size: 14px;
+color: #777;
+line-height: 1.6;
+}
+
+.plant-img {
+width: 100%;
+height: auto;
+margin-bottom: 10px;
+}

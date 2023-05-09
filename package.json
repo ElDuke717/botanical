@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -14,5 +15,31 @@
     "style-loader": "^3.3.2",
     "webpack": "^5.82.0",
     "webpack-cli": "^5.1.1"
-  }
+  },
+  "name": "botanical",
+  "description": "This is an online resource for gardeners, plant enthusiasts, horticulturalists, landscapers and botanists.  It is a quick reference and resource that provides fine details about a plant of interest.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server/server.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElDuke717/botanical.git"
+  },
+  "keywords": [
+    "plants",
+    "botanical",
+    "codesmith",
+    "solo",
+    "project"
+  ],
+  "author": "Nick Huemmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ElDuke717/botanical/issues"
+  },
+  "homepage": "https://github.com/ElDuke717/botanical#readme"
 }
