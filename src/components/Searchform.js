@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Search extends Component {
  state = {
    query: '',
@@ -12,6 +13,7 @@ class Search extends Component {
  }
 
  render() {
+  console.log('this.state.query', this.state.query)
    return (
     <div className="search-container">
      <form>

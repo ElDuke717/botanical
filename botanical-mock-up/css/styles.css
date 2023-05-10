@@ -169,6 +169,11 @@ height: auto;
 margin-bottom: 10px;
 }
 
+.support {
+    color:#777;
+    font-size: 1.5em;
+    width: 75%;
+}
 footer {
     background-color: var(--green-2-);
     padding: 10px;

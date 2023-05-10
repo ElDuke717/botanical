@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import "../css/styles.css";
 import bcLeavesWhite from '../../assets/bc_leaves_white.png';
 import bcLeavesWhite2 from '../../assets/bc_leaves_white2.png'
+import bcLeafGreen1 from '../../assets/bc_leaf1.png';
+import bcLeafGreen2 from '../../assets/bc_leaf3.png';
 import logo from '../../assets/bc_logo_grey.png'; 
 import Search from './Searchform.js';
 import Plant from './Plant.js';
@@ -21,7 +23,9 @@ const App = () => (
 
     <div className="desc-logo-container">
         <div className="site-description">
-            Discover new plants, learn about their characteristics and how to care for them.
+        <img className="header-img" src={bcLeafGreen1} alt="leaves" />
+            <p className="discover">Discover new plants, learn about their characteristics and how to care for them.</p>
+        <img className="header-img" src={bcLeafGreen2} alt="leaves" />
         </div>
     </div>
 
@@ -30,7 +34,12 @@ const App = () => (
     <main>
     <Plant />
     </main>
-    
+    <div className="support">
+        <p className="support-text">The Botanical Compendium exist as a resource for all humanity. </p>
+        <p className="support-text">Please consider supporting the Botanical Compendium.</p>
+        <hr className="support-hr"/>
+        <p>All human life depends on Photosynthesis.</p>
+    </div>
     <footer>
         &copy; 2023 Plant Compendium. All rights reserved. | <a href="privacy.html" className="footer-text" >Privacy Policy</a> | <a href="terms.html" className="footer-text">Terms &amp; Conditions</a>
         <img className="footer-img" src={logo} alt="logo"/>

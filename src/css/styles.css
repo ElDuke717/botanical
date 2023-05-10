@@ -63,6 +63,30 @@ nav a {
 nav a:hover {
     color: #228B22;
 }
+
+.desc-logo-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+desc-logo {
+    width: 100px;
+    height: auto;
+}
+
+.site-description {
+    width: 75%;
+    margin: 24px;
+    border-radius: 2px;
+    border-color: #777;
+}
+
+.discover {
+    font-size: 2em;
+}
+
 .search-container {
     text-align: center;
     padding: 10px;
@@ -148,6 +172,30 @@ height: auto;
 margin-bottom: 10px;
 }
 
+.support {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* add this line to center vertically */
+    color: #777;
+    font-size: 1.5em;
+    width: 100%;
+    /* height: 100vh; add this line to make the element take up the full height of the viewport */
+  }
+  
+
+.support-text {
+    margin-left: 20px;
+    color:#777;
+    /* margin-left: auto; */
+}
+
+.support-hr {
+    width: 75%;
+    margin: 0 auto;
+    border: 1px solid #b6b6b6;
+}
+
 footer {
     background-color: var(--green-2-);
     padding: 10px;
@@ -160,4 +208,9 @@ footer {
 .footer-img {
     width: 200px;
     height: auto;
+}
+
+.footer-text {
+    color: white; 
+    text-decoration: none;
 }
