@@ -1,6 +1,6 @@
 /* font import */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald&display=swap');
 
 :root {
     --light-green: #D0DB97;
@@ -19,7 +19,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 header {
     display: flex;
     justify-content: space-evenly;
@@ -64,26 +63,6 @@ nav a {
 nav a:hover {
     color: #228B22;
 }
-
-.desc-logo-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-}
-
-desc-logo {
-    width: 100px;
-    height: auto;
-}
-
-.site-description {
-    width: 100px;
-    margin: 24px;
-    border-radius: 2px;
-    border-color: #777;
-}
-
 .search-container {
     text-align: center;
     padding: 10px;
@@ -179,11 +158,6 @@ footer {
 }
 
 .footer-img {
-    width: 100px;
+    width: 200px;
     height: auto;
-}
-
-.footer-text {
-    color: white; 
-    text-decoration: none;
 }

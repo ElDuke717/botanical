@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // webpack file configuration based on build-tools unit
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.js'
+        
     },
+    mode: 'development', // development mode, production mode for deployment
     module: {
         rules: [
             {
@@ -24,17 +27,34 @@ module.exports = {
             }
             },
             {
+                test: /\.css$/i,
+                use: ['style-loader', 'css-loader'],
+              },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [
                   "style-loader",
                   "css-loader",
                   "sass-loader"
                 ]
-            }
+            },
+            {
+                // this is needed so that images will render to the page
+                test: /\.(woff(2)?|ttf|eot|svg|png|jpe?g|gif)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: 'fonts/'
+                    }
+                  }
+                ]
+              },
         ],
       },
       plugins: [new HtmlWebpackPlugin({
-        template: 'index.html'
+        template: 'index.html' // points to our index.html file where root element will feed in react components.
       })],
       devServer: {
         static: {
