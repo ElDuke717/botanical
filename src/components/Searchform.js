@@ -21,31 +21,41 @@ class Search extends Component {
 };
 
 handleSubmit = async (e) => {
-  console.log('submit button clicked');
   e.preventDefault();
-  console.log('this.state.query in handleSubmit', this.state.query);
+  const query = this.state.query;
 
   try {
-    if (this.state.query && this.state.query.length > 1) {
-      const pics = await axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f41cb861ba40285afc46152b9fa3b4c&tags=${this.state.query}&per_page=24&format=json&nojsoncallback=1`, 
-        );
-      // console.log('data after axios call', pics.data);
-      // console.log('pics after call', pics.data.photos.photo[0])
+    if (query && query.length > 1) {
+      const [
+        // trefleResponse, 
+        plantResponse,
+        flickrResponse
+      ] = await Promise.all([
+        // axios.get(`https://trefle.io/api/v1/plants/search?q=${query}&token=Wz0VAGrCf0FpjxIu3yzFrRtUpmIhIDWgo9gU3pUq1d4&`),
+        axios.get(`https://perenual.com/api/species-care-guide-list?key=sk-wryE645bfa430d7fb874&species_id=1`),
+        axios.get(`https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=0f41cb861ba40285afc46152b9fa3b4c&tags=${query}&per_page=24&format=json&nojsoncallback=1`),
+      ]);
+
+      // const trefleData = trefleResponse.data;
+      const plantData = plantResponse.data;
+      const flickrData = flickrResponse.data;
+
       this.setState({
-        // use slice to limit the amount of photos
-        pics: pics.data.photos.photo.slice(0,6)
+        pics: flickrData.photos.photo.slice(0, 6),
+        // plantData: trefleData,
+        plantData: plantData
       });
-      console.log('this.state.pics after the call', this.state.pics)
-      console.log('the first picture owner in state', this.state.pics[0].owner)
+      console.log(plantData);
     } else {
       this.setState({
-        pics: []
+        pics: [],
+        plantData: null,
       });
     }
   } catch (error) {
     console.log('Error fetching and parsing data', error);
   }
-}
+};
 
  
 
@@ -67,10 +77,9 @@ handleSubmit = async (e) => {
       {this.state.pics && this.state.pics.length > 0 && (
         <Plant
           commonName={this.state.query}
-          scientificName="Aloe vera"
+          scientificName={this.state.plantData.data[1].scientific_name[0]}
           images={this.state.pics.slice(0, 6)} // Pass the first three images as a prop
-          // photoUrl={`https://farm${this.state.pics[0].farm}.staticflickr.com/${this.state.pics[0].server}/${this.state.pics[0].id}_${this.state.pics[0].secret}.jpg`}
-          description="Aloe vera is a succulent plant species of the genus Aloe. It is widely used in the cosmetic, pharmaceutical, and food industries for its various beneficial properties. The plant is also popular as a houseplant and for its ability to remove toxins from the air."
+          description={this.state.plantData.data[1].section[1].description}
           conservationStatus="least concern"
         />
       )}

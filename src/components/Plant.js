@@ -7,7 +7,7 @@ class Plant extends Component {
 
         <div className="plant">
             <h2 className="common-name">{commonName}</h2>
-            <h3 className="plant-scientific-name">Aloe vera</h3>
+            <h3 className="plant-scientific-name">{scientificName}</h3>
             
           
             <div className='photo-container'>
@@ -26,7 +26,7 @@ class Plant extends Component {
             </div>
             
             <p className="plant-description">
-                Aloe vera is a succulent plant species of the genus Aloe. It is widely used in the cosmetic, pharmaceutical, and food industries for its various beneficial properties. The plant is also popular as a houseplant and for its ability to remove toxins from the air.
+                {description}
             </p>
             <h4>Conservation status</h4>
             <p className="conservation-status">least concern</p>
