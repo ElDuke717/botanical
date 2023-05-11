@@ -29,16 +29,17 @@ const App = () => (
         </div>
     </div>
 
-    {/* Here the Search component is added to the App component */}
-    <Search />
+  
     <main>
-    <Plant />
+      {/* Here the Search component is added to the App component */}
+    <Search />
+   
     </main>
     <div className="support">
-        <p className="support-text">The Botanical Compendium exist as a resource for all humanity. </p>
+        <p className="support-text">The Botanical Compendium exists as a resource for all. </p>
         <p className="support-text">Please consider supporting the Botanical Compendium.</p>
         <hr className="support-hr"/>
-        <p>All human life depends on Photosynthesis.</p>
+        <p>All humanity depends on Photosynthesis.</p>
     </div>
     <footer>
         &copy; 2023 Plant Compendium. All rights reserved. | <a href="privacy.html" className="footer-text" >Privacy Policy</a> | <a href="terms.html" className="footer-text">Terms &amp; Conditions</a>

@@ -9,6 +9,7 @@
     --green-3: #254D32;
     --secondary-color: #777;
     --light-color: #fafafa;
+    --ligth-color2: #e7e3e3;
     --dark-color: #181D27;
 }
 
@@ -29,6 +30,20 @@ header {
     color: white;
     font-size: 36px;
     font-weight: 700;
+    background-image: linear-gradient(
+  180deg,
+  hsl(129deg 37% 36%) 0%,
+  hsl(132deg 37% 33%) 13%,
+  hsl(134deg 37% 30%) 27%,
+  hsl(136deg 37% 27%) 45%,
+  hsl(138deg 36% 25%) 65%,
+  hsl(140deg 35% 22%) 78%,
+  hsl(139deg 35% 22%) 84%,
+  hsl(139deg 35% 22%) 89%,
+  hsl(139deg 35% 22%) 93%,
+  hsl(139deg 35% 22%) 97%,
+  hsl(140deg 35% 22%) 100%
+);
 }
 
 .header-img {
@@ -77,34 +92,58 @@ desc-logo {
 }
 
 .site-description {
-    width: 75%;
+    width: 400px;
     margin: 24px;
-    border-radius: 2px;
+    border-radius: 50%;
     border-color: #777;
+    position: relative;
+    overflow: hidden;
 }
+.site-description::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 5px 2px #000;
+    border-radius: 50%;
+    overflow: hidden;
+  }
 
 .discover {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .search-container {
-    text-align: center;
-    padding: 10px;
-    background-color: #fafafa;
-    border-bottom: 1px solid #ccc;
+	text-align: center;
+	padding: 10px;
+	background-color: #fafafa;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 400px;
+	margin: auto;
+    border-radius: 5px;
+}
+
+.search-form {
+    width: 400px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .search-input {
-    font-size: 14px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    outline: none;
-    width: 300px;
-    height: 2rem;
+	font-size: 14px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	outline: none;
+	width: 500px;
+	height: 2rem;
+	margin: 10px;
 }
 
 .search-input:focus {
@@ -115,6 +154,18 @@ desc-logo {
     font-size: 21px;
     color: #777;
     margin-right: 10px;
+}
+.submit-button {
+    font-size: 20px;
+    font-family: Merriweather, serif;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: none;
+    background-color: var(--ligth-color2);
+    color: #777;
+    cursor: pointer;
+    width: 100px;
 }
 
 .site-sub-title {
@@ -147,7 +198,7 @@ background-color: white;
 border: 1px solid #ccc;
 border-radius: 5px;
 padding: 20px;
-margin-bottom: 20px;
+margin: 20px;
 }
 
 .common-name {
@@ -180,7 +231,7 @@ margin-bottom: 10px;
     color: #777;
     font-size: 1.5em;
     width: 100%;
-    /* height: 100vh; add this line to make the element take up the full height of the viewport */
+    
   }
   
 

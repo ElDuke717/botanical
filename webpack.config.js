@@ -59,7 +59,21 @@ module.exports = {
       devServer: {
         static: {
           directory: path.join(__dirname, 'client/index.js'),
-          publicPath: 'http://localhost:8080/',
+          publicPath: 'dist',
         },
+        // headers: {
+        //   'Access-Control-Allow-Origin': '*',
+        //   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
+        // },
+        // proxy: {
+        //   '/api': {
+        //     target: 'https://trefle.io',
+        //     secure: false,
+        //     changeOrigin: true,
+        //     pathRewrite: {
+        //       '^/api': '/api/v1/species',
+        //     },
+        // },
+        // },
       },
     };
