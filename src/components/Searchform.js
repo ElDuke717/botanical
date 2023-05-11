@@ -33,7 +33,7 @@ handleSubmit = async (e) => {
       // console.log('pics after call', pics.data.photos.photo[0])
       this.setState({
         // use slice to limit the amount of photos
-        pics: pics.data.photos.photo.slice(0,3)
+        pics: pics.data.photos.photo.slice(0,6)
       });
       console.log('this.state.pics after the call', this.state.pics)
       console.log('the first picture owner in state', this.state.pics[0].owner)
@@ -66,9 +66,10 @@ handleSubmit = async (e) => {
     </div>
       {this.state.pics && this.state.pics.length > 0 && (
         <Plant
-          commonName="Aloe Vera"
+          commonName={this.state.query}
           scientificName="Aloe vera"
-          photoUrl={`https://farm${this.state.pics[0].farm}.staticflickr.com/${this.state.pics[0].server}/${this.state.pics[0].id}_${this.state.pics[0].secret}.jpg`}
+          images={this.state.pics.slice(0, 6)} // Pass the first three images as a prop
+          // photoUrl={`https://farm${this.state.pics[0].farm}.staticflickr.com/${this.state.pics[0].server}/${this.state.pics[0].id}_${this.state.pics[0].secret}.jpg`}
           description="Aloe vera is a succulent plant species of the genus Aloe. It is widely used in the cosmetic, pharmaceutical, and food industries for its various beneficial properties. The plant is also popular as a houseplant and for its ability to remove toxins from the air."
           conservationStatus="least concern"
         />

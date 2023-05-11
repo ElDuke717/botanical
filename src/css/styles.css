@@ -202,7 +202,7 @@ margin: 20px;
 }
 
 .common-name {
-font-size: 22px;
+font-size: 48px;
 color: #228B22;
 margin-bottom: 10px;
 }
@@ -217,11 +217,22 @@ color: #777;
 line-height: 1.6;
 }
 
+.photo-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;  
+}
+
 .plant-img {
-width: 100%;
+width: 200px;
 height: auto;
 margin-bottom: 10px;
+border-radius: 5px;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+.plant-img:hover {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
 
 .support {
     display: flex;
